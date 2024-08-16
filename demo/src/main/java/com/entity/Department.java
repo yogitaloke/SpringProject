@@ -19,14 +19,14 @@ public class Department {
 	
 	
 	@OneToMany(mappedBy="department")
-	private Set<Employee> emp= new HashSet<>();
+	private List<Employee> emp= new ArrayList<>();
 	
 	public Department() {
 		// TODO Auto-generated constructor stub
 	}
 
 	
-	public Department(Integer departmentId, String departmentName, Set<Employee> emp) {
+	public Department(Integer departmentId, String departmentName, List<Employee> emp) {
 		super();
 		this.departmentId = departmentId;
 		this.departmentName = departmentName;
@@ -52,11 +52,11 @@ public class Department {
 	
 	
 
-	public Set<Employee> getEmp() {
+	public List<Employee> getEmp() {
 		return emp;
 	}
 
-	public void setEmp(Set<Employee> emp) {
+	public void setEmp(List<Employee> emp) {
 		this.emp = emp;
 	}
 
